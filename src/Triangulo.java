@@ -18,10 +18,11 @@ public class Triangulo extends Figura {
     }
 
     public void calcularBaricentro(){
-        baricentro.setX((listaPuntos.get(0).getX()+listaPuntos.get(1).getX()+listaPuntos.get(2).getX())/3);
-        baricentro.setY((listaPuntos.get(0).getY()+listaPuntos.get(1).getY()+listaPuntos.get(2).getY())/3);
-        baricentro.setZ((listaPuntos.get(0).getZ()+listaPuntos.get(1).getZ()+listaPuntos.get(2).getZ())/3);
-        listaPuntos.add(baricentro);
+        double bx= ((listaPuntos.get(0).getX()+listaPuntos.get(1).getX()+listaPuntos.get(2).getX())/3);
+        double by= ((listaPuntos.get(0).getY()+listaPuntos.get(1).getY()+listaPuntos.get(2).getY())/3);
+        double bz= ((listaPuntos.get(0).getZ()+listaPuntos.get(1).getZ()+listaPuntos.get(2).getZ())/3);
+        Punto puntoaux = new Punto(bx, by, bz);
+        listaPuntos.add(puntoaux);
     }
     public double calcularArea(double a, double b, double c){
         double s= (a+b+c)/2;
