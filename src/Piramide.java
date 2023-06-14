@@ -23,8 +23,8 @@ public class Piramide extends Triangulo{
         double c = calcularDistancia(0,2);
         double area1 = calcularArea(a,b,c);
 
-    double altura = calcularDistancia(3,4);
-    return 1/3*(area1)*(altura);
+        double altura = calcularDistancia(3,4);
+    return ((area1)*(altura))/3;
     }
 
 
